@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 import EmojiPicker from "emoji-picker-react";
 
-const socket = io("http://localhost:3001");
+const socket = io("https://livechatapp-1w9p.onrender.com");
 
 const publicRooms = [
   "Gaming",
