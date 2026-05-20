@@ -8,15 +8,20 @@
 body {
   background:
     radial-gradient(circle at top left, #1e293b, #020617);
+
   color: white;
-  overflow: hidden;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  min-height: 100vh;
 }
 
 /* JOIN PAGE */
 
 .join-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,9 +48,17 @@ body {
   font-size: 34px;
   font-weight: 800;
   letter-spacing: 1px;
-  background: linear-gradient(90deg,#60a5fa,#c084fc);
+
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #c084fc
+  );
+
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  color: transparent;
 }
 
 .join-box input,
@@ -454,5 +467,13 @@ body {
 
   .room-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .join-container {
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
